@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cloudflared
+spec:
+  containers:
+  - name: cloudflared
+    image: cloudflare/cloudflared:2024.10.0
+    command: ["sh", "-c", "tunnel --no-autoupdate run --token $CLOUDFLARED_TOKEN"]
+    env:
+      - name: CLOUDFLARED_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: secret
+            key: token
