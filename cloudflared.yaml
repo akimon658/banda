@@ -13,3 +13,4 @@ spec:
           secretKeyRef:
             name: secret
             key: token
+  hostNetwork: true
