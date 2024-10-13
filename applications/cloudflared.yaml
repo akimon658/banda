@@ -11,6 +11,6 @@ spec:
       - name: TUNNEL_TOKEN
         valueFrom:
           secretKeyRef:
-            name: secret
+            name: cloudflare-tunnel-token
             key: token
   hostNetwork: true
