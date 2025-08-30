@@ -10,7 +10,7 @@ terraform {
     skip_s3_checksum = true
     use_path_style = true
     endpoints = {
-      s3 = "https://831106c4d239c1e8968fbfb28a1c9c05.r2.cloudflarestorage.com"
+      s3 = "https://${var.cloudflare_account_id}.r2.cloudflarestorage.com"
     }
   }
   required_providers {
