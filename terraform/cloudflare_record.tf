@@ -4,7 +4,7 @@ resource "cloudflare_record" "pages_domain" {
   proxied = true
   ttl     = 1
   type    = "CNAME"
-  zone_id = "39789e3a9e22c3a798baae245274330e"
+  zone_id = var.cloudflare_zone_id
 }
 
 resource "cloudflare_record" "terraform_managed_resource_2bc5568896dac5340e9121dacae14598" {
@@ -13,7 +13,7 @@ resource "cloudflare_record" "terraform_managed_resource_2bc5568896dac5340e9121d
   proxied = true
   ttl     = 1
   type    = "CNAME"
-  zone_id = "39789e3a9e22c3a798baae245274330e"
+  zone_id = var.cloudflare_zone_id
 }
 
 resource "cloudflare_record" "terraform_managed_resource_a639226e6e030c6b56787dffc348b994" {
@@ -22,5 +22,5 @@ resource "cloudflare_record" "terraform_managed_resource_a639226e6e030c6b56787df
   proxied = false
   ttl     = 3600
   type    = "TXT"
-  zone_id = "39789e3a9e22c3a798baae245274330e"
+  zone_id = var.cloudflare_zone_id
 }
